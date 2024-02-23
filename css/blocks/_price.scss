@@ -1,0 +1,82 @@
+.price {
+    
+    &__inner {
+        position: relative;
+        background-color: var(--color-light);
+        z-index: 2;
+        
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0,0,0,1) 55%, rgba(44, 44, 44, 0.438) 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            background-image: url(../../img/background_card_3.jpg);
+
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+            background-position: right;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -2;
+        }
+    }
+
+    &__wrapper {
+        padding-bottom: 156px;
+        max-width: 660px;
+        margin-right: 500px;
+        padding-left: 100px;
+        
+        @include tablet {
+            max-width: 500px;
+            margin: 0 auto;
+            padding-left: 0px;
+        }
+       
+    }
+
+    &__container {
+        background-color: var(--color-light);
+        color: var(--color-dark);
+        padding: 50px 50px 30px 65px;
+        border-radius: var(--border-radius);
+        box-shadow: 2px 2px 17px 2px black;
+    
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+
+        @include tablet {
+            padding: 30px 30px 20px 45px;
+        }
+    }
+
+    &__button {
+        @include hover {
+            box-shadow: 0px 0px 16px -1px var(--color-dark);
+        }
+
+        @include tablet {
+            padding-inline: 30px;
+        }
+    }
+}
+

@@ -1,0 +1,176 @@
+.footer {
+    background-color: var(--color-dark);
+
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 50px;
+        row-gap: 30px;
+        @include tablet {
+          justify-content: space-between;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 30px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__direction {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+        max-width: 485px;
+        text-wrap: wrap;
+        
+        
+
+        @include mobile-above {
+            margin-right: 20px;
+        }
+
+        @include tablet {
+            row-gap: 30px;
+            font-size: 12px;
+        }
+
+        @include mobile {
+            width: 100%;
+            row-gap: 20px;
+            align-items: center;
+            font-size: 10px;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+        }
+
+        &-phone {
+            @include hover {
+                color: var(--color-grey);
+                text-decoration: underline;
+            }
+        }
+
+        &-addres {
+            @include hover {
+                text-decoration: underline;
+            }
+        }
+
+        &-shadule {
+            position: relative;
+            left: 30px;
+
+            &-calendar {
+                ::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -30px;
+                    display: block;
+                    @include square(24px);
+                    background-image: url(../../img/icons/calendar_blank_icon.svg);
+                }
+            }
+
+
+            &-phone {
+                ::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -30px;
+                    display: block;
+                    @include square(24px);
+                    background-image: url(../../img/icons/phone_icon.svg);
+                }
+            }
+            &-addres {
+
+                ::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -30px;
+                    display: block;
+                    @include square(24px);
+                    background-image: url(../../img/icons/map_icon.svg);
+                }
+            }
+            
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 65px;
+        padding-block: 20px;
+        margin-bottom: 40px;
+
+        &-list {
+            display: flex;
+            column-gap: 30px;
+        }
+
+        &-link {
+            cursor: pointer;
+            display: block;
+            padding: 15px 5px;
+            text-decoration: none;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size 0.3s;
+
+
+            @include hover {
+                color: var(--color-accent);
+                background-size: 100% 2px;
+            }
+        }
+
+        &-messages {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 20px;
+
+            @include tablet {
+                column-gap: 10px;
+            }
+
+            @include mobile {
+                
+            }
+            
+            a {
+                @include hover {
+                    color: var(--color-grey-alt);
+                    background-size: 100% 2px;
+                }
+            }
+        }
+    }
+
+    &__sub {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+            font-size: 7px;
+        }
+    }
+}
+

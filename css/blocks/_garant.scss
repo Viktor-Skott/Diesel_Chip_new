@@ -1,0 +1,60 @@
+.garant {
+    
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        column-gap: 40px;
+        list-style-type: none;
+        counter-reset: num;
+       
+        @include mobile {
+            row-gap: 30px;
+        }
+        
+    }
+
+    &__item {
+        &:nth-child(-n+9) {
+            --counterContent: "" counter(num);
+            counter-increment: num;
+        }
+
+        position: relative;
+        margin: 0 0 0 0;
+        padding: 0 0 10px 0;
+        
+        &-title {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+            &:before {
+                content: '0' var(--counterContent); 
+                font-size: 3em;
+                color: var(--color-accent);
+            }
+        }
+        
+
+
+        &-wrap {
+            display: grid;
+            grid-template-columns: 0.8fr 1fr;
+            align-items: center;
+            
+            column-gap: 20px;
+
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+
+        &-discription {
+            max-width: 670px;
+        }
+    }
+
+}

@@ -1,0 +1,127 @@
+.header {
+    font-family: 'Montserrat', sans-serif;
+    &__logo {
+        display: block;
+        width: 127px;
+        padding: 15px 5px;
+
+        
+
+        
+        @include tablet {
+            width: 100px;
+        }
+
+        @include mobile {
+            width: 160px;
+        }
+
+        img {
+            width: 100%;
+            transition: var(--transition-duration);
+
+            @include hover {
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    background-color: var(--color-dark);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 15px;
+
+        @include tablet {
+            padding-inline: 20px;
+            padding-block: 10px;
+            font-size: 12px;
+        }
+    }
+
+
+    &__nav {
+
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+
+            @include tablet {
+                column-gap: 10px;
+            }
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+
+            @include tablet {
+                column-gap: 10px;
+            }
+        }
+
+        &-item {
+           position: relative;
+
+            a {
+                cursor: pointer;
+                display: block;
+                padding: 15px 5px;
+                text-decoration: none;
+            }
+
+
+        }
+
+        &-border {
+            a {
+                background-image: linear-gradient(currentColor, currentColor);
+                background-position: 0% 100%;
+                background-repeat: no-repeat;
+                background-size: 0% 0.8px;
+                transition: background-size .3s;
+            }
+
+
+            a {
+                @include hover {
+                    color: var(--color-accent);
+                    background-size: 100% 0.8px;
+                }
+            }
+        }
+
+        &-messages {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+
+            @include tablet {
+                column-gap: 10px;
+            }
+            
+            a {
+                @include hover {
+                    color: var(--color-grey-alt);
+                    background-size: 100% 2px;
+                }
+            }
+        }
+
+        &-phone {
+            a {
+                display: block;
+                padding: 10px 10px;
+            }
+        }
+    }
+}

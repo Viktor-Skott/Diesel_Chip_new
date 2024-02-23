@@ -1,0 +1,21 @@
+.scroll-top {
+    position: fixed;
+    top: 90%;
+    left: 92%;
+    width: 55px;
+    height: 55px;
+    opacity: 0.8;
+    z-index: 999;
+
+    a {
+        padding: 20px;
+    }
+
+    @include mobile {
+        top: 90%;
+        left: 83%;
+        width: 43px;
+        height: 43px;
+    }
+}
+

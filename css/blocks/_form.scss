@@ -1,0 +1,31 @@
+.form {
+    display: flex;
+    justify-content: start;
+    column-gap: 60px;
+    margin-bottom: 60px;
+    
+    
+    @include mobile {
+      font-size: 12px;
+    }
+
+    @include tablet {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        @include tablet {
+            max-width: 400px;
+        }
+
+        @include mobile {
+            max-width: 300px;
+        }
+        
+    }
+}

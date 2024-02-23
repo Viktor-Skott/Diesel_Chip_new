@@ -1,0 +1,32 @@
+.element-animation {
+    clip-path: inset(0 0 0 100%);
+     animation: reveal-right 1.5s cubic-bezier(0.17, 0.97, 0.38, 1) forwards 300ms;
+     opacity: 0;
+}
+
+@keyframes reveal-right{
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
+.element-animation.element-show {
+     
+     clip-path: inset(0 100% 0 0);
+    animation: reveal-left 1.5s cubic-bezier(0.17, 0.97, 0.38, 1) forwards 300ms;
+    opacity: 1;
+}
+
+
+  @keyframes reveal-left{
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }

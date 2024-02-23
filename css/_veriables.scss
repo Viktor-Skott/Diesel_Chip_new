@@ -1,0 +1,36 @@
+:root {
+    --color-dark: #000000;
+    --color-dark-alt: #202020;
+    --color-light: #ffffff;
+    // --color-accent: #0400d3;
+    --color-accent: #0054F2; 
+    --color-accent-active: #0400ff;
+    --color-grey: #ebebeb;
+    --color-grey-alt: #898989;
+
+    --border: 1px solid var(--color-dark);
+    --border-radius: 10px;
+    --border-radius-small: 7px;
+    --border-radius-large: 45px;
+
+    --shadow: 0px 5px 0px 0px var(--color-dark);
+
+    --font-family-base: 'TenorSans', sans-serif;
+
+    --container-width: 1440px;
+    --container-padding-x: 50px;
+
+    --section-padding-y: 60px;
+
+    --input-height: 60px;
+    --button-height: 60px;
+
+    --transition-duration: 0.2s;
+
+    @include desktop {
+        --section-padding-y: 50px;
+    }
+    @include mobile {
+        --section-padding-y: 30px;
+    }
+}

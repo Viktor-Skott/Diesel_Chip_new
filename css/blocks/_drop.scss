@@ -1,0 +1,65 @@
+.drop {
+    &__container {
+        height: 100%;
+        min-width: 12em;
+        text-align: center;
+
+        &-blue {
+            @include hover {
+                cursor: pointer;
+                color: var(--color-accent);
+            }
+        }
+        
+    }
+
+    &__container:hover > .drop__list {
+       
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    &__list {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 2;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        
+    
+        opacity: 0.00000001;
+        transform: scale(0);
+        transform-origin: top;
+        transition: 250ms ease-in-out;
+
+        a {
+            padding-inline: 15px;
+        }
+
+        
+    }
+
+    &__item {
+        width: 100%;
+        position: relative;
+        text-align: left;
+
+        a {
+            background: inherit;
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 0.8px;
+            transition: 0.2s;
+        }
+
+
+        a {
+            @include hover {
+                background: rgba(255, 255, 255, 0.101);
+                background-size: 100% 0.8px;
+            }
+        }
+        
+    }
+}

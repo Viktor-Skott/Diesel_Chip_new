@@ -1,0 +1,16 @@
+.new {
+
+    &__main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        margin: 600px;
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: 700;
+        color: black;
+    }
+}

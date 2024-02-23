@@ -1,0 +1,163 @@
+.specification {
+
+    &__inner {
+        color: var(--color-dark);
+        background: linear-gradient(0deg, rgb(49 49 49 / 74%) -8%, rgb(255, 255, 255) 7%);
+
+
+        padding-bottom: 50px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            align-items: center;
+            margin-bottom: 40px;
+            row-gap: 30px;
+        }
+
+
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.4);
+
+            @include tablet {
+                flex-direction: column;
+                max-width: 500px;
+                margin-bottom: 20px;
+            }
+
+        }
+
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        max-width: 500px;
+        padding: 40px 30px;
+        margin-left: 50px;
+
+        @include tablet {
+            justify-content: center;
+            padding: 20px 10px;
+            margin-left: 37px;
+        }
+
+        @include mobile {
+            padding: 20px 10px;
+            margin-left: 37px;
+        }
+
+        &-diagnost {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 40px;
+                left: -30px;
+                background-image: url(../../img/icons/diagnost_icon.svg);
+                width: 40px;
+                height: 40px;
+
+                @include tablet {
+                    top: 16px;
+                    left: -27px;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    &__photo {
+        display: block;
+        height: 100%;
+    }
+
+    &__advantages {
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            display: flex;
+            column-gap: 20px;
+        }
+
+    }
+
+    &__chip {
+        position: relative;
+        display: flex;
+        margin: 60px 0;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            vertical-align: top;
+            position: absolute;
+            top: 50%;
+            height: 0;
+            width: 42%;
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-color: inherit;
+            margin-right: 20px;
+
+        }
+
+        &::after {
+            content: '';
+            display: inline-block;
+            vertical-align: top;
+            position: absolute;
+            top: 50%;
+            left: 52%;
+            height: 0;
+            width: 42%;
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-color: inherit;
+            margin-left: 80px;
+        }
+
+
+        &-svg {
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin-inline: auto;
+        }
+    }
+
+    &__button {
+        margin-block: 40px;
+
+        @include mobile {
+            margin-block: 10px;
+            width: 100%;
+        }
+
+
+        &-wrapper {
+            display: flex;
+            column-gap: 40px;
+
+            @include mobile {
+                flex-direction: column;
+            }
+        }
+
+        &--transperrent {
+            border: 1px solid black;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.application {
+    &__section {
+        position: relative;
+        overflow: hidden;
+        
+        &-decoration {
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 35%;
+                left: 73%;
+                width: 300px;
+                height: 500px;
+                background-image: url(../../img/service_show_class.png);
+                background-size: 300px;
+                background-repeat: no-repeat;
+                z-index: -2;
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__inner {
+        position: relative;
+        background-color: var(--color-dark-alt);
+        color: var(--color-light);
+        z-index: 0;
+        }
+    
+
+
+    &__form {
+        &-title {
+            margin-bottom: 60px;
+
+            @include mobile {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            padding-inline: 50px;
+            width: 100%;
+
+            @include tablet {
+                padding-inline: 30px;
+            }
+
+            @include mobile {
+                padding-inline: 0;
+            }
+        }
+    }
+}

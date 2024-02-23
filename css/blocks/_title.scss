@@ -1,0 +1,36 @@
+.title {
+    margin-bottom: 60px;
+    text-transform: none;
+    text-align: center;
+    width: 100%;
+    font-size: 36px;
+
+    @include tablet {
+        font-size: 32px;   
+        margin-bottom: 40px;
+    }
+    @include mobile {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    &-low {
+        margin-bottom: 20px;
+        
+
+        @include tablet {
+            font-size: 20px;   
+        }
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &-accent {
+        color: var(--color-accent);
+    }
+
+    &-left {
+        text-align: left;
+    }
+}
