@@ -21,9 +21,7 @@
         @include tablet {
             font-size: 20px;   
         }
-        @include mobile {
-            font-size: 18px;
-        }
+        
     }
 
     &-accent {
@@ -33,4 +31,11 @@
     &-left {
         text-align: left;
     }
+
+    &-sub {
+        text-decoration: underline;
+        color: var(--color-accent);
+        opacity: 0.7;
+    }
 }
+

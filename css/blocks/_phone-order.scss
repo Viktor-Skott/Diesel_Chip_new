@@ -1,0 +1,93 @@
+.phone-order {
+    &__section {
+        padding-block: 20px;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+    &__inner {
+        background: linear-gradient(to right, #233263, #268bff);
+        
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        padding: 30px;
+        background-color: rgba(0, 0, 0, 0.46);
+        
+        // border-radius: var(--border-radius-large);
+
+        @include mobile {
+            padding: 20px 10px;
+        }
+        
+    }
+
+    &__title {
+        @include tablet {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    &__sub-title {
+        margin: 0;
+
+        @include tablet {
+            font-size: 18px;
+            text-align: center;
+        }
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+
+    &__phone {
+        font-size: 30px;
+
+        @include tablet {
+            font-size: 20px;
+        }
+
+        @include mobile {
+            font-size: 16px;
+        }
+
+        @include hover {
+            color: var(--color-accent);
+        }
+    }
+
+    &__icon {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -50px;
+            display: block;
+            width: 50px;
+            aspect-ratio: 1;
+            background-image: url(../../img/icons/phone_icon.svg);
+            background-repeat: no-repeat;
+            background-size: 50px;
+
+            @include tablet {
+                background-size: 30px;
+                top: -10px;
+    left: -35px;
+            }
+        }
+    }
+
+}

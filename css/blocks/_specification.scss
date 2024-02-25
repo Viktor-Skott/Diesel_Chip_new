@@ -4,9 +4,13 @@
         color: var(--color-dark);
         background: linear-gradient(0deg, rgb(49 49 49 / 74%) -8%, rgb(255, 255, 255) 7%);
 
-
         padding-bottom: 50px;
     }
+
+
+
+
+
 
     &__item {
         display: flex;
@@ -18,8 +22,6 @@
             row-gap: 30px;
         }
 
-
-
         &-wrapper {
             display: flex;
             justify-content: space-between;
@@ -28,33 +30,31 @@
 
             @include tablet {
                 flex-direction: column;
-                max-width: 500px;
+                row-gap: 40px;
                 margin-bottom: 20px;
+                max-width: 600px;
             }
-
         }
-
     }
 
     &__content {
         position: relative;
         display: flex;
         flex-direction: column;
-        row-gap: 20px;
-
-        max-width: 500px;
+        justify-content: space-between;
+        width: 100%;
         padding: 40px 30px;
-        margin-left: 50px;
+        row-gap: 60px;
+        
+
 
         @include tablet {
             justify-content: center;
-            padding: 20px 10px;
-            margin-left: 37px;
+            padding: 30px 20px;
         }
 
         @include mobile {
             padding: 20px 10px;
-            margin-left: 37px;
         }
 
         &-diagnost {
@@ -62,14 +62,20 @@
                 content: "";
                 position: absolute;
                 top: 40px;
-                left: -30px;
+                left: 25px;
                 background-image: url(../../img/icons/diagnost_icon.svg);
                 width: 40px;
                 height: 40px;
 
                 @include tablet {
+                    top: 26px;
+                    left: 20px;
+                    width: 30px;
+                    height: 30px;
+                }
+                @include mobile {
                     top: 16px;
-                    left: -27px;
+                    left: 20px;
                     width: 30px;
                     height: 30px;
                 }
@@ -77,10 +83,24 @@
         }
     }
 
-    &__photo {
-        display: block;
-        height: 100%;
+    &__photo-image {
+        position: relative;
+        display: flex;
+        @include square(100%);
+        background-color: black;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+        }
     }
+
+    &__title {
+        margin-left: 50px;
+    }
+
+
 
     &__advantages {
         display: flex;

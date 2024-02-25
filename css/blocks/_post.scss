@@ -12,27 +12,30 @@
         flex-direction: column;
         row-gap: 55px;
         column-gap: 20px;
-    
-        @include tablet {
-           
+        
+        @include mobile {
+            align-items: center;
         }
+        
     }
 
     &__item {
+        position: relative;
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         background-color: var(--color-light);
         box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.4);
-        border-radius: var(--border-radius);
+
         overflow: hidden;
 
-        @include tablet-above {
+        @include mobile-above {
             column-gap: 20px;
         }
 
         @include mobile {
             flex-direction: column;
+            max-width: 500px;
+            
         }
     }
 
@@ -40,24 +43,20 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        flex-shrink: 1.5;
+        width: 100%;
         padding: 80px 60px;
         row-gap: 60px;
-        min-width: 660px;
-        max-width: 660px;
+       
 
         @include tablet {
-            min-width: 400px;
-            max-width: 400px;
             row-gap: 40px;
-            padding: 60px 40px;
+            padding: 30px 20px;
         }
 
         @include mobile {
-            font-size: 12px;
             min-width: 200px;
             row-gap: 20px;
-            padding: 40px 30px;
+            padding: 30px 20px;
         }
         
 
@@ -113,96 +112,28 @@
 
 
     &__photo {
-        display: block;
         position: relative;
-        width: 100%;
-        background-color: var(--color-dark);
+        display: flex;
+        @include square(100%);
+        background-color: black;
+        overflow: hidden;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            width: 100%;
-            height: 100%;
-            background-color: var(--color-dark);
-            opacity: 0.2;
-            z-index: 3;
-        }
-        
-        &-image {
-
-            &-first {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    background-image: url(../../img/case_1.jpg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    z-index: 2;
-                }
-            }
-            &-second {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    background-image: url(../../img/case_2.jpg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    z-index: 2;
-                }
-            }
-            &-thirth {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    background-image: url(../../img/case_3.jpg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    z-index: 2;
-                }
-            }
-            &-fourth {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    background-image: url(../../img/case_4.jpg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    z-index: 2;
-                }
-            }
+        @include mobile {
+         @include square(100%);
             
         }
+
+        &-container {
+            img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+
+
     }
-
-
-    
+            
 
     &__title {
         text-align: start;
@@ -210,6 +141,11 @@
    
 
     &__button {
+        display: flex;
         align-self: flex-end;
+
+        @include mobile {
+            align-items: center;
+        }
     }
 }

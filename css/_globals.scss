@@ -1,5 +1,5 @@
 body {
-    @include fluid-text(16, 12);
+    @include fluid-text(18, 14);
 
     font-family: var(--font-family-base);
     font-weight: 400;
@@ -37,14 +37,7 @@ a {
     color: inherit;
 }
 
-p {
-    @include mobile {
-        font-size: 12px;
-    }
-    @include mobile-s {
-        font-size: 10px;
-    }
-}
+
 
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;

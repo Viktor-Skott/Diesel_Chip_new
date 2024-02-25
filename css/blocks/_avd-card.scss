@@ -1,10 +1,12 @@
-.avd-card {
+.adv-card {
     
     &__wrap {
         display: flex;
         column-gap: 10px;
         margin-bottom: 15px;
-        justify-content: space-between;
+    }
 
+    &__title {
+        font-size: 20px;
     }
 }

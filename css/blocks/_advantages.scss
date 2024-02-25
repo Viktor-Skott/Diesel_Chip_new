@@ -28,11 +28,12 @@
             align-items: start;
             justify-content: space-between;
             column-gap: 30px;
+            padding-block: 20px;
 
             @include tablet {
                 flex-wrap: wrap;
                 justify-content: center;
-              
+                
                 row-gap: 60px;
             }
 
@@ -40,7 +41,7 @@
         }
 
         &-item {
-            max-width: 350px;
+            max-width: 360px;
         }
         
     }
