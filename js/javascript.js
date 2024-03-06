@@ -61,7 +61,7 @@ closeIcon.addEventListener("click", () => {
 
 
 
-function popupToggle(){
+function popupToggle() {
   const popup = document.getElementById('popup');
   popup.classList.toggle('active')
 }
@@ -112,9 +112,54 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active-s", "");
   }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += " active-s";
 }
+
+
+// базовая маска
+$.mask.definitions['N'] = '[489]';
+$(".input-test").mask(
+	     '+7 (N99) 999-99-99',
+        {
+            placeholder: '_',
+            completed:function(){
+                console.log("Ввод завершен (базовый).");
+            },
+            autoclear: false
+        }
+        );
+
+// действия при вводе
+$(".input-test").keyup(function () {
+
+	var val = $(this).val();
+
+	// стандартная маска > пользователь вводим восьмерку > меняем маску 
+	if (val[4] === '8' && val[1] === '7') {
+		$(this).val('8 (___) ___-__-__');
+		$(this).attr('placeholder', '8 (999) 999-99-99')
+		$(this).unmask();
+		$.mask.definitions['N'] = '[49]';
+		$(this).mask(
+			'8 (N99) 999-99-99',
+			{
+				placeholder: '_',
+				completed:function(){
+					console.log('Ввод завершен (измененный).');
+					
+				},
+				autoclear: false
+			}
+		);
+		$(this).focus();
+		}
+});
+
+
+
+
+
 
