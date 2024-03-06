@@ -77,7 +77,7 @@
                     left: -30px;
                     display: block;
                     @include square(24px);
-                    background-image: url(../../img/icons/calendar_blank_icon.svg);
+                    background-image: url(../img/icons/calendar_blank_icon.svg);
                 }
             }
 
@@ -90,7 +90,7 @@
                     left: -30px;
                     display: block;
                     @include square(24px);
-                    background-image: url(../../img/icons/phone_icon.svg);
+                    background-image: url(../img/icons/phone_icon.svg);
                 }
             }
             &-addres {
@@ -102,7 +102,7 @@
                     left: -30px;
                     display: block;
                     @include square(24px);
-                    background-image: url(../../img/icons/map_icon.svg);
+                    background-image: url(../img/icons/map_icon.svg);
                 }
             }
             

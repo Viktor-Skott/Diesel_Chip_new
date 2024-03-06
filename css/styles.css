@@ -784,7 +784,7 @@ h4 {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../../img/background_banner_2.jpg);
+  background-image: url(../img/background_banner_2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -1033,27 +1033,27 @@ h4 {
   opacity: 0.7;
 }
 .services__item-computer-diagnostics {
-  background-image: url(../../img/services_comp_diagnost.jpg);
+  background-image: url(../img/services_comp_diagnost.jpg);
   background-position: bottom;
 }
 .services__item-chip_tuning {
-  background-image: url(../../img/services_chip_tuning.jpg);
+  background-image: url(../img/services_chip_tuning.jpg);
   background-position: center;
 }
 .services__item-egr {
-  background-image: url(../../img/services_square/services_egr_full.JPG);
+  background-image: url(../img/services_square/services_egr_full.JPG);
   background-position: center;
 }
 .services__item-diagnost {
-  background-image: url(../../img/services_square/services_ostsilograf_full.JPG);
+  background-image: url(../img/services_square/services_ostsilograf_full.JPG);
   background-position: center;
 }
 .services__item-rem {
-  background-image: url(../../img/services_square/services_provod_full.JPG);
+  background-image: url(../img/services_square/services_provod_full.JPG);
   background-position: center;
 }
 .services__item-adblue {
-  background-image: url(../../img/services_square/services_adblue_full.jpg);
+  background-image: url(../img/services_square/services_adblue_full.jpg);
   background-position: center;
 }
 @media (max-width: 1280px) {
@@ -1211,7 +1211,7 @@ h4 {
   display: block;
   width: 24px;
   aspect-ratio: 1;
-  background-image: url(../../img/icons/calendar_blank_icon.svg);
+  background-image: url(../img/icons/calendar_blank_icon.svg);
 }
 .footer__direction-shadule-phone ::after {
   content: "";
@@ -1221,7 +1221,7 @@ h4 {
   display: block;
   width: 24px;
   aspect-ratio: 1;
-  background-image: url(../../img/icons/phone_icon.svg);
+  background-image: url(../img/icons/phone_icon.svg);
 }
 .footer__direction-shadule-addres ::after {
   content: "";
@@ -1231,7 +1231,7 @@ h4 {
   display: block;
   width: 24px;
   aspect-ratio: 1;
-  background-image: url(../../img/icons/map_icon.svg);
+  background-image: url(../img/icons/map_icon.svg);
 }
 .footer__nav {
   display: flex;
@@ -1432,7 +1432,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../../img/background_card_3.jpg);
+  background-image: url(../img/background_card_3.jpg);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   background-position: right;
   background-size: cover;
@@ -1712,7 +1712,7 @@ h4 {
   left: 73%;
   width: 300px;
   height: 500px;
-  background-image: url(../../img/service_show_class.png);
+  background-image: url(../img/service_show_class.png);
   background-size: 300px;
   background-repeat: no-repeat;
   z-index: -2;
@@ -2031,27 +2031,27 @@ h4 {
   border-radius: var(--border-radius-small);
 }
 .cost__item-computer-diagnostics {
-  background-image: url(../../img/services_comp_diagnost.jpg);
+  background-image: url(../img/services_comp_diagnost.jpg);
   background-position: bottom;
 }
 .cost__item-chip_tuning {
-  background-image: url(../../img/services_chip_tuning.jpg);
+  background-image: url(../img/services_chip_tuning.jpg);
   background-position: center;
 }
 .cost__item-egr {
-  background-image: url(../../img/services_square/services_egr_full.JPG);
+  background-image: url(../img/services_square/services_egr_full.JPG);
   background-position: center;
 }
 .cost__item-diagnost {
-  background-image: url(../../img/services_square/services_ostsilograf_full.JPG);
+  background-image: url(../img/services_square/services_ostsilograf_full.JPG);
   background-position: center;
 }
 .cost__item-rem {
-  background-image: url(../../img/services_square/services_provod_full.JPG);
+  background-image: url(../img/services_square/services_provod_full.JPG);
   background-position: center;
 }
 .cost__item-adblue {
-  background-image: url(../../img/services_square/services_adblue_full.jpg);
+  background-image: url(../img/services_square/services_adblue_full.jpg);
   background-position: center;
 }
 .cost__block {
@@ -2171,7 +2171,7 @@ h4 {
   position: absolute;
   top: 40px;
   left: 25px;
-  background-image: url(../../img/icons/diagnost_icon.svg);
+  background-image: url(../img/icons/diagnost_icon.svg);
   width: 40px;
   height: 40px;
 }
@@ -2369,7 +2369,7 @@ h4 {
   display: block;
   width: 50px;
   aspect-ratio: 1;
-  background-image: url(../../img/icons/phone_icon.svg);
+  background-image: url(../img/icons/phone_icon.svg);
   background-repeat: no-repeat;
   background-size: 50px;
 }
