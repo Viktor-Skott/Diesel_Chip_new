@@ -1,31 +1,107 @@
 .cost {
     &__section {
-        color: var(--color-dark-alt);
+        color: var(--color-dark);
+        padding-inline: 100px;
+
+        @include tablet {
+            padding-inline: 20px;
+        }
     }
 
     &__list {
-        display: flex;
-        column-gap: 60px;
-        row-gap: 80px;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        column-gap: 30px;
+        row-gap: 60px;
         justify-content: center;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {
+        color: var(--color-light);
+        position: relative;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        z-index: 1;
+        border-radius: var(--border-radius-small);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-dark);
+            z-index: -1;
+            opacity: 0.75;
+            border-radius: var(--border-radius-small);
+            
+        }
+
+        &-computer-diagnostics {
+            background-image: url(../../img/services_comp_diagnost.jpg);
+            background-position: bottom;
+        }
+
+        &-chip_tuning {
+            background-image: url(../../img/services_chip_tuning.jpg);
+            background-position: center;
+        }
+
+        &-egr {
+            background-image: url(../../img/services_square/services_egr_full.JPG);
+            background-position: center;
+        }
+
+        &-diagnost {
+            background-image: url(../../img/services_square/services_ostsilograf_full.JPG);
+            background-position: center;
+        }
+
+        &-rem {
+            background-image: url(../../img/services_square/services_provod_full.JPG);
+            background-position: center;
+        }
+        
+        &-adblue {
+            background-image: url(../../img/services_square/services_adblue_full.jpg);
+            background-position: center;
+        }
     }
 
     &__block {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        row-gap: 40px;
-        max-width: 500px;
+        row-gap: 15px;
+        min-width: 300px;
         max-height: 900px;
-        padding: 30px 40px;
-        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.4);
+        min-height: 300px;
+        padding: 30px 10px;
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.3);
         border-radius: var(--border-radius);
 
+        @include tablet {
+            min-height: 200px;
+        }
+
         @include mobile {
-            row-gap: 20px;
+            row-gap: 0px;
             padding: 20px 20px;
+            min-width: 200px;
         }
     }
 
@@ -33,7 +109,7 @@
         svg {
             color: var(--color-accent);
         }
-        
+
     }
 
     &__text {
@@ -52,11 +128,11 @@
                 column-gap: 10px;
             }
         }
-        
+
     }
 
     &__cost {
-        font-size: 30px;
+        font-size: 24px;
         font-weight: 400;
     }
 
@@ -69,5 +145,6 @@
         align-self: center;
     }
 
-    
+
 }
+

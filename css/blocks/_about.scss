@@ -6,6 +6,7 @@
 
     &__history {
         display: flex;
+        flex-shrink: 1;
         column-gap: 60px;
         margin-bottom: 100px;
 
@@ -16,6 +17,8 @@
     }
 
     &__content {
+
+        min-width: 400px;
         &-title {
             text-align: start;
         }
@@ -36,6 +39,11 @@
 
 
     &__photo {
+        max-width: 600px;
+
+        @include tablet {
+            max-width: 100%;
+        }
 
         &-wrapper {
             display: grid;

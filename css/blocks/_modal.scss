@@ -16,9 +16,9 @@
     z-index: 1;
     visibility: hidden;
     opacity: 0;
-    transition: 0.2s;
+    transition: 0.4s;
 
-    
+
 
     &__btn-close {
         position: absolute;
@@ -29,6 +29,11 @@
 
         @include hover {
             opacity: 1;
+        }
+
+        @include mobile-s {
+            top: 15px;
+            right: 5px;
         }
     }
 
@@ -49,14 +54,31 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 999;
-        max-width: 1160px;
+        max-width: 1000px;
         background-color: var(--color-light);
         border-radius: 20px;
         box-shadow: var(--shadow);
+
+        @include mobile {
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+            margin-inline: 20px;
+        }
+        @include tablet {
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+            margin-inline: 20px;
+        }
     }
 
     &__inner {
         margin-inline: 20px;
+    }
+
+    &__section {
+        padding-inline: 5px;
     }
 
     &__input {
@@ -64,12 +86,9 @@
         width: 100%;
         padding-block: 10px;
 
-        @include tablet {
-           
-        }
-        @include mobile {
-            
-        }
+        @include tablet {}
+
+        @include mobile {}
 
         &--textarea {
             min-width: 400px;
@@ -81,9 +100,13 @@
             @include mobile {
                 min-width: 100%;
             }
+
+            @include mobile-s {
+                height: 140px;
+            }
         }
     }
-   
+
 
 
     &__form {
@@ -94,7 +117,7 @@
                 margin-bottom: 20px;
             }
         }
-    
+
 
         &-wrap {
             display: flex;
@@ -106,10 +129,17 @@
             @include tablet {
                 padding-inline: 30px;
             }
-        
+
             @include mobile {
                 padding-inline: 0;
             }
+        }
+
+        &-button {
+            @include mobile {
+                align-self: stretch !important;
+            }
+
         }
     }
 }
